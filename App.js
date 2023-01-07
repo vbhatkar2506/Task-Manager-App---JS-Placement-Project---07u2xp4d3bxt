@@ -81,6 +81,7 @@ window.onclick = (event) => {
 };
 
 /* create todo  */
+
 const todo_submit = document.getElementById("todo_submit");
 
 todo_submit.addEventListener("click", createTodo);
