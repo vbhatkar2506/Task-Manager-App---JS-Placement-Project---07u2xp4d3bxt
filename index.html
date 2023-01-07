@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Task Manager</title>
+  </head>
+  <body>
+    <div id="heading">
+        <h1>Task Manager</h1>
+    </div>
+    <!-- modal -->
+    <div class="modal" id="todo_form">
+      <div class="header">
+        <div>Add New Task</div>
+        <button class="btn close-modal">&times;</button>
+      </div>
+      <div class="body">
+        <input type="text" id="todo_input" placeholder="Topic" />
+        <input type="text" id="todo_dcpt" placeholder="Description " />
+        <input type="submit" value="Create New Task" id="todo_submit" />
+      </div>
+    </div>
 
+    <!-- todo -->
+    <div class="todo-container" id="container">
+      <div class="status" id="no_status">
+        <h2>Open</h2>
+        <button id="add_btn" data-target-modal="#todo_form">+ Add Task</button>
+        <div class="todo" draggable="true">
+           JS Placement Project
+          <span class="close">&times;</span>
+        </div>
+      </div>
+
+      <!-- progress sections -->
+      <div class="status">
+        <h2>In Progress</h2>
+      </div>
+      <div class="status">
+        <h2>In Review</h2>
+      </div>
+      <div class="status">
+        <h2>Done</h2>
+      </div>
+    </div>
+
+    <div id="overlay"></div>
+
+    <script src="App.js"></script>
+  </body>
+</html>
